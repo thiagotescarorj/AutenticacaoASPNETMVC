@@ -149,17 +149,30 @@
     <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Painel\Mensagens.cshtml" />
     <Content Include="Views\Perfil\AlterarSenha.cshtml" />
+    <Content Include="Views\CadastroUsuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
+    <Compile Include="Controllers\CadastroUsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Filters\AutorizacaoTipo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005150313465_InitialCreate.cs" />
+    <Compile Include="Migrations\202005150313465_InitialCreate.designer.cs">
+      <DependentUpon>202005150313465_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005160015491_CriaTipoUsuario.cs" />
+    <Compile Include="Migrations\202005160015491_CriaTipoUsuario.designer.cs">
+      <DependentUpon>202005160015491_CriaTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TipoUsuario.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuariosContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,6 +207,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005150313465_InitialCreate.resx">
+      <DependentUpon>202005150313465_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005160015491_CriaTipoUsuario.resx">
+      <DependentUpon>202005160015491_CriaTipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

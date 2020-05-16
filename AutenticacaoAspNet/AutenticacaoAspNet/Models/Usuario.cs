@@ -26,5 +26,8 @@ namespace AutenticacaoAspNet.Models
         [MaxLength(100)]
         [Display(Name = "Senha")]
         public string Senha { get; set; }
+
+        [Display(Name ="Tipo")]
+        public TipoUsuario Tipo { get; set; } = TipoUsuario.Padrao;
     }
 }
